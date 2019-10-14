@@ -40,8 +40,37 @@
         </p>
 
         <!--Radio-->
-        <p>Radio</p>
-        p
+        <p>Radio: {{ sexo }}</p>
+        <p>
+
+            <input type="radio" id="masculino" value="M" v-model="sexo">
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="feminino" value="F" v-model="sexo">
+            <label for="feminino">Feminino</label>
+
+        </p>
+
+        <!--Select simples-->
+        <p>Select {{ ano }}</p>
+        <p>
+            <select v-model="ano">
+                <option disabled value="">Escolha o ano</option>
+                <option value="2017">Ano 2017</option>
+                <option value="2018">Ano 2018</option>
+                <option value="2019">Ano 2019</option>
+            </select>
+        </p>
+
+        <!--Multiple Select-->
+        <p>Multiple Selects {{ cores }}</p>
+        <p>
+            <select multiple v-model="cores">
+                <option disabled value="">Escolha as cores</option>
+                <option>Azul</option>
+                <option>Verde</option>
+                <option>Vermelho</option>
+            </select>
+        </p>
     </div>
 
 
@@ -60,7 +89,10 @@
                 texto: '',
                 textarea: '',
                 termos:false,
-                notificacoes: []
+                notificacoes: [],
+                sexo: null,
+                ano: null,
+                cores: null
             }
                        
             
